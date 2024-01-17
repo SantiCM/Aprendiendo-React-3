@@ -1,7 +1,7 @@
 
 // boton reset
 // damos las props de el reset y del label
-export function BotonReset({resetGame, label}) {
+export function BotonReset({ resetGame, label}) {
 
     return (
 

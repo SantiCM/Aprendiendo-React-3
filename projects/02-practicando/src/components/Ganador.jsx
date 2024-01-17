@@ -1,5 +1,5 @@
-import { BotonReset } from "./BotonReset";
-import { Cuadro } from "./Cuadro";
+import { BotonReset } from './BotonReset';
+import { Cuadro } from './Cuadro';
 
 // componente del modal ganador
 // damos como props el winner y el reset

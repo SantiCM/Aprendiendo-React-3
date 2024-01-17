@@ -1,4 +1,4 @@
-import { Cuadro } from "./Cuadro"
+import { Cuadro } from './Cuadro'
 
 // tablero
 

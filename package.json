@@ -8,5 +8,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
 }
