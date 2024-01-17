@@ -1,70 +1,11 @@
 import { useState } from "react"
-
-// recojemos los turnos, que es X y 0
-const TURNS = {
-
-  X: "x",
-
-  O: "o"
-
-}
-
-// varible donde manejamos el valor del tablero
-// recojemos el children, el isSelected(osea seleccionar un cuadro)
-// updateBoard(actualizar el tablero)
-// index (posicion)
-const Square = ({children, isSelected,  updateBoard, index}) => {
-
-  // css, si esta seleccionado mostramos una clase, si no la que sigue
-  const className = `square ${isSelected ? "is-selected" : ""}`
-
-  // hacer click, es una funcion
-  const handleClick = () => {
-
-    // actualizamos la props y le damos la props de el index,
-    // osea cada que se actualiza el tablero, vera la posicion
-    updateBoard(index)
-
-  }
-
-  // retornamos jsx
-  return (
-
-    // damos que al hacer click, actualizara el tablero
-    <div onClick={handleClick} className={className}>
-
-      {/*Damos el children, el cual hace que todo lo que envuelva el tablero pase */}
-      {children}
-
-    </div>
-    
-  )
-
-}
-
-// wins
-const WIINER_COMBOS = [
-
-  // horizontales
-  [0, 1, 2],
-
-  [3, 4, 5],
-
-  [6, 7, 8],
-
-  // verticales
-  [0, 3, 6],
-
-  [1, 4, 7],
-
-  [2, 5, 8],
-
-  // diagonales
-  [0, 4, 8],
-
-  [2, 4, 6],
-
-]
+import conffeti from "canvas-confetti"
+import {TURNS} from "./arrays"
+import { checkWinner, checkEndGame } from "./logic/board"
+import { GanadorModal } from "./components/Ganador"
+import { Cuadro } from "./components/Cuadro"
+import { BotonReset } from "./components/BotonReset"
+import { Tablero } from "./components/Tablero"
 
 function App() {
 
@@ -78,31 +19,14 @@ function App() {
   // estado de winner, lo damos en nulo es que perdio
   const [winner, setWinner] = useState(null)
 
-  // checar si gana,
-  // damos un argumento de checar el tablero
-  const checkWinner = (boardToCheck) => {
+  const resetGame = () => {
     
-    // damos un for, donde la const es el combo de la variable de los combos de ganar
-    for(const combo of WIINER_COMBOS) {
+    setBoard(Array(9).fill(null))
 
-      // recojemos la posicion  de arreglo a,b,c del como
-      const [a, b, c] = combo
+    setTurn(TURNS.X)
 
-      // decimos si el arg esta en la posicion a y pasa
-      // damos el que si el arg en posicion a es igual a tablero del b, osea que es igual el simbolo
-      // pasamos
-      // y si damos el que si el arg en posicion a es igual a tablero del c, retornamos el actualizar del a
-      if(boardToCheck[a] &&  boardToCheck[a] === boardToCheck[b] && boardToCheck[a] === boardToCheck[c]) {
-      
-        return boardToCheck[a]
-    
-      }
-
-    }
-
-    // si no retornamos nada, nadie gano
-    return null
-
+    setWinner(null)
+  
   }
 
   // actualizar el board, recojemos el index
@@ -133,10 +57,16 @@ function App() {
     const newWinner = checkWinner(newBoard)
 
     // si hay ganador 
-    if(winner) {
+    if(newWinner) {
+
+      conffeti()
       
       // damos el segundo estado de ganador y damos el neuvo ganador
       setWinner(newWinner)
+    
+    } else if (checkEndGame(newBoard)) {
+    
+      setWinner(false)
     
     }
   
@@ -148,39 +78,36 @@ function App() {
 
       <h1>Tic Tac Toe</h1>
 
+      <BotonReset resetGame={resetGame} label="Reset"></BotonReset>
+
       <section className="game">
 
-        {board.map((_, index) => {
-
-          return (
-            
-            <Square key={index} index={index} updateBoard={updateBoard}></Square>
-
-          )
-          
-        })}
+        <Tablero board={board} updateBoard={updateBoard}></Tablero>
 
       </section>
 
       <section className="turn">
 
-        <Square 
+        <Cuadro 
         
           isSelected={turn === TURNS.X}
         
         >   {TURNS.X}
         
-        </Square>
+        </Cuadro>
 
-        <Square
+        <Cuadro
 
           isSelected={turn === TURNS.O}
         
         >   {TURNS.O}
         
-        </Square>
+        </Cuadro>
 
       </section>
+
+      <GanadorModal winner={winner} resetGame={resetGame}></GanadorModal>
+
 
     </main>
     
