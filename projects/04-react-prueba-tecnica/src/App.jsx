@@ -1,51 +1,23 @@
-import { useEffect, useState } from "react"
 import "./App.css"
-
-
-const CAT_ENDPOINT_PREFIX = "https://cataas.com"
-
-const CAT_ENDPOINT_DEFAULT= "https://catfact.ninja/fact"
+import { useCatImage } from "./hooks/useCatImage"
+import { useCatFact } from "./hooks/useCatFact"
+import { Otro } from "./components/Otro"
 
 export function App() {
 
-    const [fact, setFact] = useState()
+    // recojemos el fact y el actualizar de el hook useCatFact
+    const {fact, refreshFact} = useCatFact()
 
-    const [image, setImage] = useState()
+    // recojemos la image de el hook useCatImage y le damos la fact, ya que lo recibe el hook 
+    const {image} = useCatImage( { fact } )
 
-    useEffect(() => {
+    // al hacer clikc, damos un async
+    const handleClick = async () => {
         
-        fetch(CAT_ENDPOINT_DEFAULT).then(response => response.json()).then(data => {
-                
-            const {fact} = data 
-
-            setFact(fact)
-
-        })
-
-    }, [])
-
-    useEffect(() => {
-
-        if(!fact) return 
-      
-        const threeWord = fact.split(' ', 3).join(' ')
-
-        fetch(`https://cataas.com/cat/says/${threeWord}?size=50&color=red&json=true`)
-        
-            .then(res => res.json()).then(response => {
-
-                console.log()
-
-                const {url} = response
-
-                setImage(url)
-
-            }
-            
-        )
-
-    }, [fact])
+        // lo refrescamos
+       refreshFact()
     
+    }
     
     return (
 
@@ -53,11 +25,22 @@ export function App() {
 
             <h1>App de gatitos</h1>
 
+            {/*Damos el onClick de la varibale de arriba */}
+            <button onClick={handleClick}>Cargar una nueva imagen y frase</button>
+
             <section>
 
+                {/*Si el fact pasa lo mostramos */}
                 { fact && <p>{fact}</p> }
 
-                { image && <img src={`${CAT_ENDPOINT_PREFIX}${image}`} alt={`Imagen que sale de las primeras tres palabras de la frase ${fact}`}></img>}
+                {/*Si la imagen pasa, mostramos en la pantalla */}
+                { image && <img 
+                    
+                    src={image}  alt={`Imagen que sale de las primeras tres palabras de la frase ${fact}`}></img>
+                    
+                }
+
+                <Otro></Otro>
 
             </section>
 
