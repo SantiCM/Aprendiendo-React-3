@@ -6,12 +6,30 @@
 }
 
 main {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 form {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.movies {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie {
+  border-radius: 8px;
+  text-align: center;
+  list-style: none;
+}
+
+.movie img {
+  border-radius: 10px;
 }

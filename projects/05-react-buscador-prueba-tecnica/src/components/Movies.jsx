@@ -2,11 +2,11 @@ export function ListOnMovies({ movies }) {
   
   return (
   
-    <ul>
+    <ul className="movies">
    
       {movies.map((movie) => (
    
-        <li key={movie.id}>
+        <li className="movie" key={movie.id}>
         
           <h3>{movie.title}</h3>
 
