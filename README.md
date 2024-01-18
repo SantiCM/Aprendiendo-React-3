@@ -7,4 +7,6 @@ Por carpeta que suba, subire el creador del tutorial, y el link del video donde 
 
 #02-practicando y 03-useEffect - Yotube - Midudev - https://www.youtube.com/watch?v=qkzcjwnueLA&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29&index=2
 
-#04-react-prueba-tenica- - Yotube - Midudev - https://www.youtube.com/watch?v=XYpadB4VadY&t=15s
+#04-react-prueba-tenica - Yotube - Midudev - https://www.youtube.com/watch?v=XYpadB4VadY&t=15s
+
+#05-react-buscador-prueba-tecnica - Yotube - Midudev - https://www.youtube.com/watch?v=GOEiMwDJ3lc&t=4897s
