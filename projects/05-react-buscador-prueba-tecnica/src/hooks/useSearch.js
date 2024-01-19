@@ -1,51 +1,67 @@
 import { useEffect, useState, useRef } from "react"
 
+// buscar 
 export function useSearch() {
 
-    const [search, setSearch] = useState("")
-  
+    // recojemos el estado de actualizar el search como arreglo vacio
+    const [updateSearch, setUpdateSearch] = useState("")
+    
+    // el error en nulo
     const [ error, setError ] = useState(null)
 
+    // y damos un ref, en true
     const isFirstInput = useRef(true)
-  
+    
+    // efecto
     useEffect(() => {
 
+        // si el valor del ref (current)
         if(isFirstInput.current) {
             
-            isFirstInput.current === search === ""
+            // ese ref del current tiene que ser igual al valor del input y igual a ""
+            // esto para que hasta que no haya una busqueda del usuario no aparezcan errores
+            isFirstInput.current === updateSearch === ""
 
+            // lo retornamos
             return
         
         }
 
-        if(search === "") {
-      
+        // si hay una busqueda con "" cadena vacia
+        if(updateSearch === "") {
+            
+            // damos el error y lo retornamos
             setError("No se puede buscar una peli vacia")
   
             return
       
         }
-  
-        if(search.match(/^d+$/)) {
+        
+        // si hace match con estos parametros, error y lo retornamos
+        if(updateSearch.match(/^d+$/)) {
       
             setError("No se puede buscar una peli con numeros")
         
             return
       
         }
-  
-        if(search.length < 3) {
+        
+        // si el valor es menor a 3 damos el error y lo retornamos
+        if(updateSearch.length < 3) {
       
             setError("No existen pelis de solo 2 palabras o menos")
         
             return
       
         }
-  
+        
+        // damos el estado en nulo, ya acabo
         setError(null)
-      
-    }, [search])
+        
+        // como dependencia es la busqueda
+        // ya que por cada vez que se actualize el valor del input, este efectado sera ejecutado
+    }, [updateSearch])
   
-    return { search, setSearch, error }
+    return { updateSearch, setUpdateSearch, error }
     
 }
