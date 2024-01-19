@@ -4,35 +4,44 @@ import { useState } from "react"
 // mover el pointer
 export function PointerMove() {
 
-    // estado 
+    // estado en false
     const [enabled, setEnabled] = useState(false)
 
+    // estado de la posicion, "x" y "y" en cero
     const [position, setPosition] = useState( { x: 0, y: 0 } )
-  
+    
+    // efecto
     useEffect(() => {
-  
+        
+        // si se mueve, recibimos el ev
         const handleMove = (ev) => {
         
             const {clientX, clientY} = ev
-  
+            
+            // la segunda posicion es el valor del ev de arriba
             setPosition( { x: clientX, y: clientY } )
   
         }
-  
+        
+        // si lo activa, damos el window, damos el evento de mover el pointer y lo movemos
         if(enabled) {
         
             window.addEventListener("pointermove", handleMove)
       
         }
-  
+        
+        // si no retornamos que se remueva 
         return () => {
         
             window.removeEventListener("pointermove", handleMove)
       
         }
-    
+        
+        // le damos la dependencia del valor si se desmonta o no
+        // porque justo eso, si se monta damos esto y si se desmonta igual
     }, [enabled])
 
+    // efecto igual de arriba por estilos
     useEffect(() => {
 
         document.body.classList.toggle("no-cursor", enabled)
