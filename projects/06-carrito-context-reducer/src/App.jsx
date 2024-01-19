@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Products} from "./components/Products"
+import {products as initialProducts} from "./mocks/products.json"
+import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
+import { useFilters } from "./hooks/useFilters"
+import { IS_DEVELOPMENT } from "./config"
+import { Cart } from "./components/Cart"
+import { CartContextProvider } from "./context/CartContext"
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const { filterProducts } = useFilters()
+    
+    const filteredProducts = filterProducts(initialProducts)
+
+    return (
+
+        <>
+
+            <Header></Header>
+
+            <CartContextProvider>
+
+             <Cart></Cart>
+
+                <Products products={filteredProducts}></Products>
+
+                { IS_DEVELOPMENT && <Footer></Footer> }
+
+            </CartContextProvider>
+
+        </>
+    
+    )
+
 }
-
-export default App

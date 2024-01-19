@@ -1,5 +1,5 @@
-import { useState, useId, useContext } from "react"
-import "./Filters.css"
+import { useId, useContext } from "react"
+import "./styles/Filters.css"
 import { FiltersContext } from "../context/FiltersContext"
 
 export function Filters() {

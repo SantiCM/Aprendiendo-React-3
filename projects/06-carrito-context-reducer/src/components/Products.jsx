@@ -1,7 +1,17 @@
-import "./Products.css"
-import {AddToCartIcon} from "../components/Icons"
+import "./styles/Products.css"
+import {AddToCartIcon, RemoveFromCartIcon} from "../components/Icons"
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
 
 export function Products({products}) {
+
+    const {addToCart, cart , removeCart} = useContext(CartContext)
+
+    const checkProductInCart = product => {
+    
+        return cart.some(item => item.id === product.id)
+    
+    }
 
     return (
         
@@ -9,31 +19,46 @@ export function Products({products}) {
 
             <ul>
 
-                {products.slice(0,10).map((text) => (
+                {products.slice(0,10).map((product) => {
+
+                    const isProductInCart = checkProductInCart(product)
+
+                    return (
                         
-                    <li key={text.id}>
+                        <li key={product.id}>
 
-                        <img src={text.thumbnail} alt={text.title}></img>
+                            <img src={product.thumbnail} alt={product.title}></img>
 
-                        <div>
+                            <div>
 
-                            <h3>{text.title}</h3>
+                                <h3>{product.title}</h3>
 
-                            <span>${text.price}</span>
+                                <span>${product.price}</span>
 
-                            <span>{text.descriptions}</span>
+                                <span>{product.descriptions}</span>
 
-                        </div>
+                            </div>
 
-                        <div>
+                            <div>
 
-                            <button><AddToCartIcon></AddToCartIcon></button>
+                                <button 
 
-                        </div>
+                                    style={{backgroundColor: isProductInCart ? "red" : "orange"}}
+                                
+                                    onClick={() => isProductInCart ? removeCart(product) : addToCart(product)}
+                                
+                                >
+                                    { isProductInCart ? <RemoveFromCartIcon></RemoveFromCartIcon> : <AddToCartIcon></AddToCartIcon> }
+                                     
+                                </button>
 
-                    </li>    
+                            </div>
 
-                ))}
+                        </li>   
+                        
+                    )
+                        
+                })}
 
             </ul>
 
