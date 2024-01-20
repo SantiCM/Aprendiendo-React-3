@@ -1,5 +1,5 @@
 import { useReducer } from "react"
-import { CART_ACTION_TYPES, cartReducer, initialState } from "../reducers/cart"
+import { CART_ACTION_TYPES, cartReducer, initialState } from "../../reducers/cart"
 
 // hook del reducer de cart
 export function useCartReducer() {

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { FiltersContext } from "../context/FiltersContext"
+import { FiltersContext } from "../../context/FiltersContext"
 
 // hook de los filtros 
 export function useFilters() {
