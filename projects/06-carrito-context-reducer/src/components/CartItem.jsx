@@ -1,3 +1,4 @@
+// ccomponente del item del carrito, todas sus props
 export function CartItem({ thumbnail, title, price, quantity, addToCart }) {
 
     return (

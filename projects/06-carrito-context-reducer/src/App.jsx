@@ -9,8 +9,10 @@ import { CartContextProvider } from "./context/CartContext"
 
 export function App() {
 
+    // recojemos los filtros de los productos del hook
     const { filterProducts } = useFilters()
-    
+
+    // y decimos que los filtros ya hechos es lo de arriba y le damos el json de los products
     const filteredProducts = filterProducts(initialProducts)
 
     return (
