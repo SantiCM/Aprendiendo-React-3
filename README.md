@@ -12,3 +12,5 @@ Por carpeta que suba, subire el creador del tutorial, y el link del video donde 
 #05-react-buscador-prueba-tecnica - Yotube - Midudev - https://www.youtube.com/watch?v=GOEiMwDJ3lc&t=4897s
 
 #06-carrito-context-reducer - Youtube - Midudev - https://www.youtube.com/watch?v=B9tDYAZZxcE&list=PLhJspey0gui19-KOEwLHn-LDCDMTbeEcM&index=3&t=3729s
+
+#07-react-router - Youtube - Midudev - https://www.youtube.com/watch?v=K2NcGYajvY4&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29&index=7
