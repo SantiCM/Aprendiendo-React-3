@@ -20,3 +20,5 @@ Por carpeta que suba, subire el creador del tutorial, y el link del video donde 
 #09-axios-tutorial - `Este lo hice en base a el video del 10, pero con react`
 
 #10-axios - Youtube - FalconMasters - https://www.youtube.com/watch?v=Zt1VceJs0vU&t=490s
+
+#11-axios-react - Youtube - Facundo Tissera - https://www.youtube.com/watch?v=R5LTmCSOVCg&t=110s
