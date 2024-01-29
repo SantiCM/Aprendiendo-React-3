@@ -14,3 +14,9 @@ Por carpeta que suba, subire el creador del tutorial, y el link del video donde 
 #06-carrito-context-reducer - Youtube - Midudev - https://www.youtube.com/watch?v=B9tDYAZZxcE&list=PLhJspey0gui19-KOEwLHn-LDCDMTbeEcM&index=3&t=3729s
 
 #07-react-router - Youtube - Midudev - https://www.youtube.com/watch?v=K2NcGYajvY4&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29&index=7
+
+#08-talwind - Youtube - Midudev - https://www.youtube.com/watch?v=h5HQVHTpeHs&t=4237s
+
+#09-axios-tutorial - `Este lo hice en base a el video del 10, pero con react`
+
+#10-axios - Youtube - FalconMasters - https://www.youtube.com/watch?v=Zt1VceJs0vU&t=490s
