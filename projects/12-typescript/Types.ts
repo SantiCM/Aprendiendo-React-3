@@ -34,3 +34,16 @@ const a = 1
 const b = 3
 
 const c = a + b
+
+//INTERFERENCIA en funciones anonimas segun el contexto
+
+// entonces en este caso damos un arreglo de string
+
+const avengers = [ "Hulk", "Spiderman", "IronMan" ]
+
+// lo que pasa aqui es que el lenguaje entiende que el parametro es string
+// y ya no seria necesario darle un tipo
+avengers.forEach(avengers => {
+
+    console.log(avengers.length === 9)
+})
