@@ -22,3 +22,5 @@ Por carpeta que suba, subire el creador del tutorial, y el link del video donde 
 #10-axios - Youtube - FalconMasters - https://www.youtube.com/watch?v=Zt1VceJs0vU&t=490s
 
 #11-axios-react - Youtube - Facundo Tissera - https://www.youtube.com/watch?v=R5LTmCSOVCg&t=110s
+
+#12-typescript `12-1` - Youtube - Midudev  - https://www.youtube.com/watch?v=fUgxxhI_bvc&list=PLUofhDIg_38pNCZe9ptj72exbFjzyePxT&index=1
