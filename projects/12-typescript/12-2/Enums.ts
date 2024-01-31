@@ -22,12 +22,15 @@ function mostrarMensaje (tipodeError) {
 
 }*/
 
+/* --------------------------------------------------------------------------------------- */
+
 // TS
 
 // coleccion de datos finita
-// sin const, cuando se ocupa por
+// sin const es cuando lo utilizanos afuera
 const enum ERROR_TYPES{ NOT_FOUND, UNAUTHORIZED , FORBIDDEN }
 
+// damos una funcion y como parametro es el tipo de ese enum
 function mostrarMensaje (tipodeError: ERROR_TYPES) {
 
     if( tipodeError === ERROR_TYPES.NOT_FOUND ) {
