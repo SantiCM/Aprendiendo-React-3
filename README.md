@@ -23,6 +23,8 @@ Por carpeta que suba, subire el creador del tutorial, y el link del video donde 
 
 #11-axios-react - Youtube - Facundo Tissera - https://www.youtube.com/watch?v=R5LTmCSOVCg&t=110s
 
+#11-1-axios - Youtube - Fatz Code - https://www.youtube.com/watch?v=i8sr--1D13Y&t=1914s
+
 #12-typescript `12-1` - Youtube - Midudev  - https://www.youtube.com/watch?v=fUgxxhI_bvc&list=PLUofhDIg_38pNCZe9ptj72exbFjzyePxT&index=1
 
 #12-typescript `12-2` - Youtube - Midudev  - https://www.youtube.com/watch?v=L1ZSk-vPVKI&t=2523s
