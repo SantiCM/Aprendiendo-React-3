@@ -1,10 +1,26 @@
 import {useEffect, useState} from "react"
 import axios from "axios"
+import PhoneInput from "react-phone-input-2"
+import 'react-phone-input-2/lib/style.css';
 import { MapeoPerosnajes } from "./components/MapeoPerosnajes"
 
 export function App () {
 
   const [listActores, setListActores] = useState([])
+
+  const [formData, setFormData] = useState({
+
+    country: ""
+    
+  })
+
+  const [numeroDeTelefono, setNumeroDeTelefono] = useState("")
+
+  const handleChange = (name, value) => {
+
+    setFormData({...formData, [name]: value})
+
+  }
 
   useEffect(() => {
     
@@ -28,6 +44,12 @@ export function App () {
     <div>
 
       <h1>Actores De Game Of Thrones</h1>
+
+      <form className="flex flex-col justify-center">
+
+        <PhoneInput country={"mx"} value={formData.country} onChange={(event) => handleChange("country", event.target.value)}></PhoneInput>
+
+      </form>
 
       <ul>
 
