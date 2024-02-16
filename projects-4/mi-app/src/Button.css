@@ -1,0 +1,11 @@
+.btn {
+    transition: all .3s ease-in-out;
+    background-color: aqua;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+}
+
+.btn:hover {
+    background-color: pink;
+}

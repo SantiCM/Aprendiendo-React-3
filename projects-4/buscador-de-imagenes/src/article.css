@@ -1,0 +1,21 @@
+section {
+    display: inline-block;
+    width: 300px;
+    transition: box-shadow 0.2s ease;
+    margin: 40px 10px 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section > img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+section > p {
+    margin: 10px 15px;
+}
+
+section:hover {
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
