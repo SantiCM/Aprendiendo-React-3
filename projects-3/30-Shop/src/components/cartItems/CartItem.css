@@ -1,0 +1,62 @@
+.cartitems {
+  margin: 100px 70px;
+}
+
+.cartitems hr {
+  height: 3px;
+  background: #e2e2e2;
+  border: 0;
+}
+
+.cartitems-format-main {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 20px 0px;
+  color: #454545;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.cartitems-formart {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.carticon-product-icon {
+  height: 100px;
+}
+.carticon-product-icon-remove {
+  width: 20px;
+}
+
+.cartitems-quantity {
+  padding: 10px 10px;
+  border: none;
+  font-size: 22px;
+  width: 80px;
+  background: red;
+  color: white;
+  border-radius: 100px;
+}
+
+.caritems-total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0px;
+  font-size: 20px;
+  width: 50%;
+}
+
+.cartitems-total button {
+  padding: 10px 20px;
+  width: 262px;
+  height: 60px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  background: red;
+  border-radius: 50px;
+  cursor: pointer;
+}
