@@ -1,0 +1,24 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+}
+
+li {
+  padding-bottom: 2rem;
+}
+
+.btn-ip {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: rgb(228, 200, 169);
+  border: none;
+  border-radius: 2px;
+  margin-right: 2rem;
+  font-size: 1rem;
+}
