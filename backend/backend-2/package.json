@@ -1,0 +1,21 @@
+{
+  "name": "backend-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http1.js",
+  "scripts": {
+    "dev1": "nodemon http1.js",
+    "dev2": "nodemon routing.js",
+    "dev3": "node --watch ./express/express.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}

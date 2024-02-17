@@ -1,0 +1,16 @@
+GET http://localhost:1234/pokemon/ditto
+
+### Get de pokemon
+
+POST  http://localhost:1234/pokemon
+Content-Type: : application/json
+
+{
+    "name": "Santi",
+    "type": "normal",
+    "movies": [
+        "transform"
+    ]
+}
+
+### Crear pokemon
