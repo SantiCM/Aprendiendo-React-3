@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "aprendiendo node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiMelo7/Aprendiendo-React.git"
+  },
+  "keywords": [
+    "aprendiendo-node-js"
+  ],
+  "author": "Santi Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantiMelo7/Aprendiendo-React/issues"
+  },
+  "homepage": "https://github.com/SantiMelo7/Aprendiendo-React#readme",
+  "dependencies": {
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
