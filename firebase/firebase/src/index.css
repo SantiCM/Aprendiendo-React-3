@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+  @apply w-[40vh] p-2 rounded-md text-gray-900 font-extrabold border-[2px] border-blue-900;
+}
+
+button {
+  @apply bg-red-500 text-white px-10 py-3 rounded-lg mx-auto;
+}
+
+button.google {
+  @apply bg-blue-500 text-white px-10 py-3 rounded-lg mx-auto;
+}
+
+button.logout {
+  @apply bg-green-500 text-white px-10 py-3 rounded-lg mx-auto;
+}
