@@ -1,30 +1,20 @@
 // ccomponente del item del carrito, todas sus props
 export function CartItem({ thumbnail, title, price, quantity, addToCart }) {
+  return (
+    <li>
+      <img src={thumbnail}></img>
 
-    return (
-        
-        <li>
+      <div>
+        <h3>{title}</h3>
 
-            <img src={thumbnail}></img>
+        <strong>${price}</strong>
+      </div>
 
-            <div>
+      <footer>
+        <small>Cantidad: {quantity}</small>
 
-                <h3>{title}</h3>
-
-                <strong>${price}</strong>
-
-            </div>
-
-            <footer>
-
-                <small>Cantidad: {quantity}</small>
-
-                <button onClick={addToCart}>+</button> 
-
-            </footer>
-
-        </li>
-        
-    )
-
+        <button onClick={addToCart}>+</button>
+      </footer>
+    </li>
+  );
 }

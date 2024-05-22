@@ -1,17 +1,11 @@
-import { Filters } from "./Filters"
+import { Filters } from "./Filters";
 
 export function Header() {
+  return (
+    <header>
+      <h1>Shopping Cart</h1>
 
-    return (
-        
-        <header>
-
-            <h1>Shopping Cart</h1>
-
-            <Filters></Filters>
-
-        </header>
-        
-    )
-
+      <Filters></Filters>
+    </header>
+  );
 }
