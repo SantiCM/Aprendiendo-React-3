@@ -1,5 +1,4 @@
 import { Flex } from "antd";
-import { Line } from "@ant-design/charts";
 import {
   First,
   FormBase,
@@ -8,32 +7,11 @@ import {
   SelectBase,
   Grid,
   TableBase,
+  Grafhic,
 } from "./components";
 import { ModalBase } from "./components/ModalBase";
-import { dataGrafichs } from "./util/data";
 
 function App() {
-  const config = {
-    dataGrafichs,
-    title: {
-      visible: true,
-      text: "Goles de Cristiano Ronaldo en el Real Madrid",
-    },
-    xField: "season",
-    yField: "scores",
-    color: "#2593fc",
-    point: {
-      visible: true,
-      size: 5,
-      shape: "diamond",
-      style: {
-        fill: "white",
-        stroke: "#2593fc",
-        lineWidth: 2,
-      },
-    },
-  };
-
   return (
     <>
       <Flex vertical justify="center" gap="middle" align="center">
@@ -48,7 +26,7 @@ function App() {
       </Flex>
       <ModalBase />
       <TableBase />
-      <Line data={config} xField="season" yField="scores" />
+      <Grafhic />
     </>
   );
 }

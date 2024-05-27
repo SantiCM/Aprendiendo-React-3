@@ -51,12 +51,10 @@ export const dataGrafichs = [
         scores: 30,
     },
     {
-        season: "2012/2013",
-        scores: 30,
+        season: "2012/2013", scores: 30,
     },
     {
-        season: "2013/2014",
-        scores: 30,
+        season: "2013/2014", scores: 30,
     },
     {
         season: "2014/2015",
