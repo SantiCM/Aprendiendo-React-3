@@ -1,0 +1,12 @@
+.ant-message-notice-content {
+  background-color: aqua !important;
+  color: black !important;
+}
+
+.col {
+  color: white;
+  width: 30vh;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
