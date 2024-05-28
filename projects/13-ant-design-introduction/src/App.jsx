@@ -7,13 +7,15 @@ import {
   SelectBase,
   Grid,
   TableBase,
-  Grafhic,
 } from "./components";
 import { ModalBase } from "./components/ModalBase";
+import { DashboardContent } from "./components/dashboard/DashboardContent";
+import { DashboardFull } from "./components/dashboardFull/DashboardFull";
 
 function App() {
   return (
     <>
+      <DashboardFull />
       <Flex vertical justify="center" gap="middle" align="center">
         <First />
         <FormBase />
@@ -26,7 +28,7 @@ function App() {
       </Flex>
       <ModalBase />
       <TableBase />
-      <Grafhic />
+      <DashboardContent />
     </>
   );
 }
