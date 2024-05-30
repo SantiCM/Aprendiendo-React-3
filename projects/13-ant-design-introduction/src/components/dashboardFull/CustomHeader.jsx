@@ -1,10 +1,5 @@
-import {
-  MessageOutlined,
-  NotificationOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Flex, Typography } from "antd";
-import Search from "antd/es/input/Search";
 
 const { Title } = Typography;
 
@@ -19,10 +14,7 @@ export function CustomHeader() {
         Welcome, Santiago Melo
       </Title>
       <Flex align="center" gap="middle">
-        <Search placeholder="Buscar" allowClear />
         <Flex justify="center" gap="middle">
-          <MessageOutlined className="icon-header" />
-          <NotificationOutlined className="icon-header" />
           <Avatar icon={<UserOutlined />} />
         </Flex>
       </Flex>

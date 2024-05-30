@@ -3,10 +3,6 @@
   color: black !important;
 }
 
-body {
-  background: #dde6ed;
-}
-
 .col {
   color: white;
   width: 30vh;
@@ -52,17 +48,21 @@ img.img-nav {
 
 .logo {
   color: #4f6f52;
-  margin: 30px 0;
   font-size: 2.5rem;
 }
 
 .header {
-  background: #fff;
+  background: #ebe4b0;
 }
 
 .content {
   margin: 24px 16px;
   padding: 20px;
+}
+
+.container-side-bar {
+  background: #ebe4b0;
+  height: 100%;
 }
 
 .triger-btn {
@@ -79,8 +79,9 @@ img.img-nav {
 }
 
 .ant-menu-item-selected {
-  background-color: #4f6f52 !important;
-  color: #fff !important;
+  background-color: #fff !important;
+  color: #e7b900 !important;
+  font-weight: 800 !important;
 }
 
 .icon-header {

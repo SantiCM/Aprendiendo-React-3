@@ -1,53 +1,62 @@
-import { Button, Flex, Menu } from "antd";
+import { Button, Flex, Image, Menu } from "antd";
 import {
-  CarryOutOutlined,
-  LogoutOutlined,
+  FundOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  ProfileOutlined,
-  RadarChartOutlined,
-  SettingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 
+import CriselLogoImg from "../../../public/crisel-logo.jpeg";
+
 export const dataItems = [
   {
-    key: 1,
+    id: 1,
     icon: <UserOutlined />,
-    label: "Dashboard",
+    label: "Usuarios",
+    url: "/usuarios",
   },
   {
-    key: 2,
-    icon: <CarryOutOutlined />,
-    label: "Orders",
+    id: 2,
+    icon: <UserOutlined />,
+    label: "Insumos",
+    url: "/insumos",
   },
   {
-    key: 3,
-    icon: <CarryOutOutlined />,
-    label: "Todo",
+    id: 3,
+    icon: <UserOutlined />,
+    label: "Categorías",
+    url: "/categorías",
   },
   {
-    key: 4,
-    icon: <ProfileOutlined />,
-    label: "Profile",
+    id: 4,
+    icon: <UserOutlined />,
+    label: "Platillos",
+    url: "/platillos",
   },
   {
-    key: 5,
-    icon: <SettingOutlined />,
-    label: "Settings",
+    id: 5,
+    icon: <UserOutlined />,
+    label: "Ordenes",
+    url: "/ordenes",
   },
   {
     key: 6,
-    icon: <LogoutOutlined />,
-    label: "Logout",
+    icon: <FundOutlined />,
+    label: "Contabilidad",
+    url: "/contabilidad",
   },
 ];
 
 export function SideBar({ isCollapsed, setIsCollapsed }) {
   return (
-    <Flex vertical justify="center" align="center">
+    <Flex
+      className="container-side-bar"
+      vertical
+      justify="center"
+      align="center"
+    >
       <div className="logo">
-        <RadarChartOutlined />
+        <Image src={CriselLogoImg} width={100} height={100} />
       </div>
       <Menu
         mode="inline"
