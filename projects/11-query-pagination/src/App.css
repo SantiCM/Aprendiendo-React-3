@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply p-8 text-center w-full;
+  margin: 0 auto;
+}
+
+.table--showColors tr:nth-child(odd) {
+  @apply bg-[#333];
+}
+
+.table--showColors tr:nth-child(even) {
+  @apply bg-[#555];
+}
+
+.pointer {
+  @apply cursor-crosshair;
+}
