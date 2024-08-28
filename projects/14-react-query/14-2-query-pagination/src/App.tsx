@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import './App.css'
 import { UsersList } from './components/UsersList'
-import { SortBy, type User } from './types.d'
+import { SortBy, type User } from './types'
 import { useUsers } from './hooks/useUsers'
 import { Results } from './components/Results'
 
