@@ -8,25 +8,15 @@ import { UserProggresContextProvider } from "./store/UserProggresContext";
 const App = () => {
 
   return (
-
     <UserProggresContextProvider>
-      
       <CardContextProvider>
-    
-        <Header></Header>
-
-        <Meals></Meals>
-
-        <Cart></Cart>
-
+        <Header />
+        <Meals />
+        <Cart />
         <NewCheckout></NewCheckout>
-    
       </CardContextProvider>
-
     </UserProggresContextProvider>
-  
   );
-
 }
 
 export default App;
