@@ -1,0 +1,68 @@
+/*import { render, screen } from "@testing-library/react"
+import { MemoryRouter } from "react-router-dom"
+import { AuthContex } from "../../src/auth/context/AuthContex"
+import { AppRouter } from "../../src/router/AppRouter"
+
+
+describe('Pruebas en <AppRouter></AppRouter>', () => { 
+
+    test('debe de mostrar el login si no esta autenticado', () => { 
+    
+        const contextValue = {
+    
+            logged: false,
+    
+        }
+
+        render(
+            
+            <MemoryRouter initialEntries={['/marvel']}>
+
+                <AuthContex.Provider value={contextValue}>
+
+                    <AppRouter></AppRouter>
+
+                </AuthContex.Provider>
+
+            </MemoryRouter>    
+            
+        )
+
+        expect(screen.getAllByText("Login").length).toBe(2)
+
+    })
+
+
+    test('debe de mostrar el componente de Marvel si esta autenticado', () => { 
+        
+        const contextValue = {
+    
+            logged: true,
+            user: {
+                id: "1212",
+                name: "Santi"
+            
+            }
+    
+        }
+
+        render(
+            
+            <MemoryRouter initialEntries={['/login']}>
+
+                <AuthContex.Provider value={contextValue}>
+
+                    <AppRouter></AppRouter>
+
+                </AuthContex.Provider>
+
+            </MemoryRouter>    
+            
+        )
+        
+        expect(screen.getAllByText("Login").length).toBeGreaterThan(2)
+        
+    })
+
+
+})*/
